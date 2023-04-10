@@ -4,16 +4,16 @@ export default async function decorate(block) {
   const tbody = document.createElement("tbody");
   table.append(thead, tbody);
   const productData = getJSONData();
-  productData.data.forEach((child, i) => {
+  for (let product in productData.data) {
     const row = document.createElement("tr");
-    if (i) tbody.append(row);
-    else thead.append(row);
-    child.forEach((col) => {
-      const cell = buildCell(i);
-      cell.innerHTML = col.innerHTML;
-      row.append(cell);
-    });
-  });
+    tbody.append(row);
+    const cell1 = document.createElement("td");
+    cell1.innerHTML = product.products;
+    row.append(cell1);
+    const cell2 = document.createElement("td");
+    cell2.innerHTML = product[release - year];
+    row.append(cell2);
+  }
   block.innerHTML = "";
   block.append(table);
 }
