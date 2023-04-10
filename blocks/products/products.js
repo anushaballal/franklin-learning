@@ -4,18 +4,18 @@ export default async function decorate(block) {
   const tbody = document.createElement("tbody");
   table.append(thead, tbody);
   const productData = getJSONData();
-  /* [...block.children].forEach((child, i) => {
+  productData.data.forEach((child, i) => {
     const row = document.createElement("tr");
     if (i) tbody.append(row);
     else thead.append(row);
-    [...child.children].forEach((col) => {
+    child.forEach((col) => {
       const cell = buildCell(i);
       cell.innerHTML = col.innerHTML;
       row.append(cell);
     });
   });
   block.innerHTML = "";
-  block.append(table); */
+  block.append(table);
 }
 
 async function getJSONData() {
