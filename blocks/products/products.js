@@ -20,7 +20,7 @@ export default async function decorate(block) {
 
 async function getJSONData() {
   const response = await fetch(
-    "https://main--franklinlearning--anushaballal.hlx.live/project-data.json?sheet=products"
+    "https://day-5--franklinlearning--anushaballal.hlx.live/project-data.json?sheet=products"
   );
   const jsonData = await response.json();
   console.log(jsonData);
