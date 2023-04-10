@@ -4,9 +4,11 @@ function getJSONData() {
   const response = fetch(
     "https://day-5--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
   );
-  const jsonData = response.json();
 
-  return jsonData;
+  console.log(response);
+  /* const jsonData = response.json(); */
+
+  return response;
 }
 
 export default async function decorate(block) {
