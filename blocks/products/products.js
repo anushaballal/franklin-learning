@@ -1,10 +1,10 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable quotes */
-async function getJSONData() {
-  const response = await fetch(
+function getJSONData() {
+  const response = fetch(
     "https://day-5--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
   );
-  const jsonData = await response.json();
+  const jsonData = response.json();
 
   return jsonData;
 }
