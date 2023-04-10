@@ -5,10 +5,9 @@ function getJSONData() {
     "https://day-5--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
   );
 
-  console.log(response);
-  /* const jsonData = response.json(); */
-
-  return response;
+  const jsonData = response.json();
+  console.log(jsonData);
+  return jsonData;
 }
 
 export default async function decorate(block) {
