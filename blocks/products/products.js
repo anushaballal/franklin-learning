@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable quotes */
 async function getJSONData() {
   const response = await fetch(
@@ -5,6 +6,7 @@ async function getJSONData() {
   );
   const jsonData = await response.json();
   console.log(jsonData);
+  console.log(jsonData.data);
 }
 
 export default async function decorate(block) {
