@@ -1,12 +1,11 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable quotes */
-function getJSONData() {
-  const response = fetch(
+async function getJSONData() {
+  const response = await fetch(
     "https://day-5--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
   );
+  const jsonData = await response.json();
 
-  const jsonData = response.getJSONData;
-  console.log(jsonData);
   return jsonData;
 }
 
@@ -15,7 +14,7 @@ export default async function decorate(block) {
   const thead = document.createElement("thead");
   const tbody = document.createElement("tbody");
   table.append(thead, tbody);
-  const productData = getJSONData();
+  const productData = await getJSONData();
   const products = productData.data;
   console.log(products);
   /* for (let product in productData.data) {
