@@ -5,8 +5,8 @@ async function getJSONData() {
     "https://day-5--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
   );
   const jsonData = await response.json();
-  console.log(jsonData);
-  console.log(jsonData.data);
+
+  return jsonData;
 }
 
 export default async function decorate(block) {
