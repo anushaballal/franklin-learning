@@ -5,7 +5,7 @@ function getJSONData() {
     "https://day-5--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
   );
 
-  const jsonData = response.json();
+  const jsonData = response.getJSONData;
   console.log(jsonData);
   return jsonData;
 }
