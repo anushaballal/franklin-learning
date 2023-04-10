@@ -1,10 +1,22 @@
+/* eslint-disable quotes */
+async function getJSONData() {
+  const response = await fetch(
+    "https://day-5--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
+  );
+  const jsonData = await response.json();
+  console.log(jsonData);
+}
+
 export default async function decorate(block) {
   const table = document.createElement("table");
   const thead = document.createElement("thead");
   const tbody = document.createElement("tbody");
   table.append(thead, tbody);
   const productData = getJSONData();
-  for (let product in productData.data) {
+  const products = productData.data;
+  console.log(products);
+  /* for (let product in productData.data) {
+    console.log(productData.data);
     const row = document.createElement("tr");
     tbody.append(row);
     const cell1 = document.createElement("td");
@@ -13,15 +25,7 @@ export default async function decorate(block) {
     const cell2 = document.createElement("td");
     cell2.innerHTML = product[release - year];
     row.append(cell2);
-  }
+  } */
   block.innerHTML = "";
   block.append(table);
-}
-
-async function getJSONData() {
-  const response = await fetch(
-    "https://day-5--franklinlearning--anushaballal.hlx.live/project-data.json?sheet=products"
-  );
-  const jsonData = await response.json();
-  console.log(jsonData);
 }
