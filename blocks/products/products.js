@@ -2,7 +2,7 @@
 /* eslint-disable quotes */
 async function getJSONData() {
   const response = await fetch(
-    "https://day-5--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
+    "https://main--franklinlearning--anushaballal.hlx.page/project-data.json?sheet=products"
   );
   const jsonData = await response.json();
   return jsonData;
